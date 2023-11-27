@@ -17,3 +17,8 @@ driver.maximize_window()
 time.sleep(3)
 
 
+# TRY LOGIN
+driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[1]/input").send_keys("demnag")
+driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[2]/input").send_keys("123ASDasd@")
+driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[5]/button").click()
+print("TEST PASSED")

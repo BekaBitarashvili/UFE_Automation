@@ -1,0 +1,44 @@
+.card
+.card--title
+.card--body
+.card--image
+card--p
+
+
+
+
+<div class="card">
+    <div class="card--title">
+        <div class="card--body">
+            <div class="card--image">
+                <div class="card--p"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+.card {
+    &--title {
+        &--body {
+            &--image {
+                &--p {
+
+                }
+            }
+        }
+    }
+
+
+    &--title{}
+    &--body{}
+    &--image{}
+    &--p
+}
+
+
+.card .card--title.card-test ===  body card card--title

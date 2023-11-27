@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .d1{
+            width: 300px;
+            height: 150px;
+            background: #243D83;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .d2{
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px #000;
+            position: relative;
+        }
+        .d2:before{
+            content:"";
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            background: purple;
+            position: absolute;
+            z-index: 1;
+        }
+        .d2:after{
+            content:"";
+            width: 25%;
+            height: 25%;
+            border-radius: 50%;
+            background: lime;
+            position: absolute;
+            z-index: 3;
+        }
+        .d2:hover:after{ ...}
+
+        /*=============================*/
+       .d1 .d2 .card div img {...}
+
+        .d1{
+            .d2{
+                &:before{...}
+                &:after{...}
+                &:hover:    before {...}
+                .card{
+                    title{}
+                    div{
+                        img
+                    }
+                }
+
+                }
+            }
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="d1">
+        <div class="d2">
+
+        </div>
+    </div>
+</body>
+</html>

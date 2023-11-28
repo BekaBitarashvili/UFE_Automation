@@ -16,9 +16,56 @@ driver.get("https://ufe-int.crystal.ge")
 driver.maximize_window()
 time.sleep(3)
 
-
 # TRY LOGIN
 driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[1]/input").send_keys("demnag")
 driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[2]/input").send_keys("123ASDasd@")
 driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[5]/button").click()
 print("TEST PASSED")
+time.sleep(3)
+
+# REGISTER BUTTON
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/ufe-customer"
+                              "-list/a").click()
+time.sleep(4)
+
+# REGISTER FLOW
+# FIRST PAGE
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                              "1]/div[1]/input").send_keys("აკაკი")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                              "1]/div[2]/input").send_keys("წერეთელი")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                              "1]/div[3]/input").send_keys("98765432100")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                              "2]/div[1]/input").send_keys("123")
+
+# TRIPLE CLICK
+element_to_triple_click = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                        "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                        "2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                                                        "2]/div[2]/kendo-datepicker/kendo-dateinput/input")
+actions = ActionChains(driver)
+actions.click(element_to_triple_click).click(element_to_triple_click).click(element_to_triple_click).perform()
+time.sleep(3)
+
+# CHOOSE DATE
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                              "/main/div/as-customer-create/kendo-tabstrip/div["
+                              "2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                              "2]/div[2]/kendo-datepicker/kendo-dateinput/input").send_keys("01012000")
+# UPLOAD FILE
+# driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer-create"
+#                               "/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div[1]/button").click()
+# time.sleep(3)
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
+                              "1]/input").send_keys("C:\\Users\\b"
+                                                    ".bitarashvili"
+                                                    "\\Desktop\\UFE"
+                                                    "\\Freeze.png")
+
+# file_path = "C:\\Users\\b.bitarashvili\\Desktop\\UFE"

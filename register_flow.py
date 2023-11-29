@@ -1,6 +1,9 @@
 import time
 
+from selenium.webdriver.support.ui import Select
 from pywinauto.keyboard import send_keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC, wait
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
@@ -81,6 +84,44 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/as-dialog/div/ufe-base-di
 driver.find_element(By.TAG_NAME, 'html').click()
 i = 8
 while i > 0:
-    achi = send_keys('{DOWN}')
+    scroll_element = send_keys('{DOWN}')
     i -= 1
 
+# MAIN INFORMATION
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div/div/div["
+                              "1]/input").send_keys("აკაკი")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div/div/div["
+                              "2]/input").send_keys("წერეთელი")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div/div/div["
+                              "3]/input").send_keys("აკიდო")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div/div/div["
+                              "4]/input").send_keys("98765432100")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div/div/div["
+                              "8]/input").send_keys("თბილისი")
+# TRIPLE CLICK
+element_to_triple_click = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                        "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                        "2]/as-customer-general/div/div/div[3]/form/div/div/div["
+                                                        "9]/kendo-datepicker/kendo-dateinput/input")
+actions = ActionChains(driver)
+actions.click(element_to_triple_click).click(element_to_triple_click).click(element_to_triple_click).perform()
+time.sleep(3)
+# CHOOSE DATE
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                              "/main/div/as-customer-create/kendo-tabstrip/div["
+                              "2]/as-customer-general/div/div/div[3]/form/div/div/div["
+                              "9]/kendo-datepicker/kendo-dateinput/input").send_keys("01012000")
+dropdown_sex_menu = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
+                                                  "/div/as-customer"
+                                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div["
+                                                  "3]/form/div/div/div["
+                                                  "10]/kendo-dropdownlist/button")
+dropdown_sex_menu.click()
+time.sleep(2)
+# CHOOSE FROM DROPDOWN_SEX_MENU
+dropdown_sex_menu.send_keys(Keys.DOWN)

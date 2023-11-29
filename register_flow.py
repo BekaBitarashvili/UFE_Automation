@@ -1,4 +1,6 @@
 import time
+
+from pywinauto.keyboard import send_keys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
@@ -67,5 +69,18 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                                                     ".bitarashvili"
                                                     "\\Desktop\\UFE"
                                                     "\\Freeze.png")
+# სგს BUTTON
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
+                              "2]/button").click()
+time.sleep(3)
+# CLOSE ERROR MESSAGE
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div["
+                              "2]/ufe-danger-dialog/div[2]/div/button").click()
+# SCROLL PAGE DOWN
+driver.find_element(By.TAG_NAME, 'html').click()
+i = 8
+while i > 0:
+    achi = send_keys('{DOWN}')
+    i -= 1
 
-# file_path = "C:\\Users\\b.bitarashvili\\Desktop\\UFE"

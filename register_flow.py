@@ -37,13 +37,13 @@ time.sleep(4)
 # FIRST PAGE
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[1]/input").send_keys("აკაკი")
+                              "1]/div[1]/input").send_keys("ილია")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[2]/input").send_keys("წერეთელი")
+                              "1]/div[2]/input").send_keys("ჭავჭავაძე")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[3]/input").send_keys("00000003418")
+                              "1]/div[3]/input").send_keys("00000004672")
 
 # CHOOSE DOC TYPE
 dropdown_document_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
@@ -74,7 +74,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
 
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "2]/div[3]/input").send_keys("00AA00419")
+                              "2]/div[3]/input").send_keys("00TR00235")
 
 # UPLOAD FILE driver.find_element(By.XPATH,
 # "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer-create" "/kendo-tabstrip/div[
@@ -276,7 +276,6 @@ dropdown_attr_status.click()
 time.sleep(2)
 dropdown_attr_status.send_keys(Keys.DOWN)
 
-
 # საცხოვრებელი სტატუსი
 dropdown_attr_home = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
                                                    "/div/as-customer-create/kendo-tabstrip/div["
@@ -297,3 +296,26 @@ print("მესამე სექცია წარმატებით შ�
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[1]/ul/li[4]/span").click()
 time.sleep(2)
+
+# პირადობის ატვირთვა
+dropdown_upload_id = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
+                                                   "/div/as-customer-create/kendo-tabstrip/div["
+                                                   "2]/as-customer-attachments/div/div/div[3]/div["
+                                                   "1]/ufe-attachment-upload/form/div[3]/div[2]/select/option[2]")
+dropdown_upload_id.click()
+time.sleep(2)
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-attachments/div/div/div[3]/div["
+                              "1]/ufe-attachment-upload/form/input").send_keys(
+    "C:\\Users\\b"
+    ".bitarashvili"
+    "\\Desktop"
+    "\\prof_image.jpg")
+
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-attachments/div/div/div[3]/div["
+                              "1]/ufe-attachment-upload/form/div[1]/ufe-ufe-toolbar/div[2]/button").click()
+time.sleep(5)
+# REGISTER BUTTON CLICK
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/div/button").click()

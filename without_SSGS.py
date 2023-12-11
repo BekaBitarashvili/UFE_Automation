@@ -37,10 +37,10 @@ time.sleep(4)
 # FIRST PAGE
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[1]/input").send_keys("ნიკა")
+                              "1]/div[1]/input").send_keys("ნატა")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[2]/input").send_keys("თორდია")
+                              "1]/div[2]/input").send_keys("გოიაშვილი")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
                               "1]/div[3]/input").send_keys("00000002014")
@@ -110,10 +110,10 @@ while i > 0:
 time.sleep(3)
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[1]/input").send_keys("ნიკა")
+                              "1]/div[1]/div[1]/input").send_keys("ნატა")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[2]/input").send_keys("თორდია")
+                              "1]/div[1]/div[2]/input").send_keys("გოიაშვილი")
 # FATHER NAME
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["

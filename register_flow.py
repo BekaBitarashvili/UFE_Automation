@@ -43,7 +43,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "1]/div[2]/input").send_keys("ჭავჭავაძე")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[3]/input").send_keys("00000002011")
+                              "1]/div[3]/input").send_keys("00000003418")
 
 # CHOOSE DOC TYPE
 dropdown_document_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
@@ -74,7 +74,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
 
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "2]/div[3]/input").send_keys("9000361")
+                              "2]/div[3]/input").send_keys("00AA00419")
 
 # UPLOAD FILE driver.find_element(By.XPATH,
 # "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer-create" "/kendo-tabstrip/div[

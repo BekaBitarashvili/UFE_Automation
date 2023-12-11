@@ -98,8 +98,9 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "2]/div/button").click()
 time.sleep(5)
 # # CLOSE ERROR MESSAGE
-# driver.find_element(By.XPATH, "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div["
-#                               "2]/ufe-danger-dialog/div[2]/div/button").click()
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div["
+                              "2]/ufe-danger-dialog/div[2]/div/button").click()
+
 # SCROLL PAGE DOWN
 driver.find_element(By.TAG_NAME, 'html').click()
 i = 8
@@ -107,15 +108,50 @@ while i > 0:
     scroll_element = send_keys('{DOWN}')
     i -= 1
 time.sleep(3)
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
+                              "1]/div[1]/div[1]/input").send_keys("გიორგი")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
+                              "1]/div[1]/div[2]/input").send_keys("სააკაძე")
 # FATHER NAME
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
                               "1]/div[1]/div[3]/input").send_keys("გიორგი")
+# PERSONAL NUMBER
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
+                              "1]/div[1]/div[4]/input").send_keys("00000002010")
 
 # BIRTHPLACE
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
                               "1]/div[2]/div[4]/input").send_keys("თბილისი")
+# TRIPLE CLICK
+elemento_to_triple_click = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                         "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                         "2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                                                         "2]/div[2]/kendo-datepicker/kendo-dateinput/input")
+actions = ActionChains(driver)
+actions.click(elemento_to_triple_click).click(elemento_to_triple_click).click(elemento_to_triple_click).perform()
+time.sleep(3)
+
+# CHOOSE DATE
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                              "/main/div/as-customer-create/kendo-tabstrip/div["
+                              "2]/as-customer-general/div/div/div[1]/div[1]/form/div["
+                              "2]/div[2]/kendo-datepicker/kendo-dateinput/input").send_keys("01012000")
+
+dropdown_sex_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
+                                                  "/div/as-customer-create/kendo-tabstrip/div["
+                                                  "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+                                                  "3]/div[2]/kendo-dropdownlist/button")
+
+dropdown_sex_type.click()
+time.sleep(2)
+# CHOOSE FROM DROPDOWN_DOC_TYPE
+dropdown_sex_type.send_keys(Keys.DOWN)
+time.sleep(2)
 
 # CHOOSE FAMILY STATUS
 dropdown_family_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
@@ -129,6 +165,67 @@ time.sleep(2)
 dropdown_family_type.send_keys(Keys.DOWN)
 time.sleep(2)
 
+# DROPDOWN BIRTH COUNTY
+dropdown_cntr_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
+                                                   "/div/as-customer-create/kendo-tabstrip/div["
+                                                   "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+                                                   "3]/div[4]/kendo-dropdownlist/button")
+
+dropdown_cntr_type.click()
+time.sleep(2)
+# CHOOSE FROM DROPDOWN_DOC_TYPE
+dropdown_cntr_type.send_keys(Keys.DOWN)
+time.sleep(2)
+
+# DROPDOWN DOCUMENT TYPE2
+dropdown_doc_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
+                                                  "/div/as-customer-create/kendo-tabstrip/div["
+                                                  "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+                                                  "4]/div[1]/kendo-dropdownlist/button")
+
+dropdown_doc_type.click()
+time.sleep(2)
+# CHOOSE FROM DROPDOWN_DOC_TYPE
+dropdown_doc_type.send_keys(Keys.DOWN)
+time.sleep(2)
+
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
+                              "1]/div[4]/div[2]/input").send_keys("9000364")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
+                              "1]/div[4]/div[3]/input").send_keys("იუსტიცია")
+# TRIPLE CLICK FOR DATE
+# გაცემის თარიღი
+gacema_to_triple_click = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                       "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                       "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+                                                       "5]/div[1]/kendo-datepicker/kendo-dateinput/input")
+actions = ActionChains(driver)
+actions.click(gacema_to_triple_click).click(gacema_to_triple_click).click(gacema_to_triple_click).perform()
+time.sleep(3)
+
+# CHOOSE DATE
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                              "/main/div/as-customer-create/kendo-tabstrip/div["
+                              "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+                              "5]/div[1]/kendo-datepicker/kendo-dateinput/input").send_keys("01012020")
+
+# ვადის გასვლის თარიღი
+expire_to_triple_click = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                       "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                       "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+                                                       "5]/div[2]/kendo-datepicker/kendo-dateinput/input")
+actions = ActionChains(driver)
+actions.click(expire_to_triple_click).click(expire_to_triple_click).click(expire_to_triple_click).perform()
+time.sleep(3)
+
+# CHOOSE DATE
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                              "/main/div/as-customer-create/kendo-tabstrip/div["
+                              "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+                              "5]/div[2]/kendo-datepicker/kendo-dateinput/input").send_keys("01012026")
+
 # SCROLL PAGE DOWN2
 driver.find_element(By.TAG_NAME, 'html').click()
 x = 12
@@ -140,6 +237,10 @@ time.sleep(3)
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
                               "2]/div/div/div[2]/input").send_keys("საქართველო")
+driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
+                              "2]/div/div/div[3]/input").send_keys("თბილისი")
+
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
                               "4]/div/div/div[2]/input").send_keys("საქართველო")

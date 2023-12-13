@@ -16,6 +16,10 @@ options = Options()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
+piradi_nomeri = "00000002019"
+sabutis_nomeri = "9000370"
+teleponis_nomeri = "571135944"
+
 driver.implicitly_wait(3)
 driver.get("https://ufe-int.crystal.ge")
 driver.maximize_window()
@@ -43,7 +47,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "1]/div[2]/input").send_keys("გოიაშვილი")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[3]/input").send_keys("00000002015")
+                              "1]/div[3]/input").send_keys({piradi_nomeri})
 
 # CHOOSE DOC TYPE
 dropdown_document_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
@@ -74,7 +78,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
 
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "2]/div[3]/input").send_keys("9000366")
+                              "2]/div[3]/input").send_keys({sabutis_nomeri})
 
 # UPLOAD FILE driver.find_element(By.XPATH,
 # "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer-create" "/kendo-tabstrip/div[
@@ -110,10 +114,10 @@ while i > 0:
 time.sleep(3)
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[1]/input").send_keys("ნატა")
+                              "1]/div[1]/div[1]/input").send_keys("ილია")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[2]/input").send_keys("გოიაშვილი")
+                              "1]/div[1]/div[2]/input").send_keys("ჭავჭავაძე")
 # FATHER NAME
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
@@ -121,7 +125,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
 # PERSONAL NUMBER
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[4]/input").send_keys("00000002015")
+                              "1]/div[1]/div[4]/input").send_keys({piradi_nomeri})
 
 # BIRTHPLACE
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
@@ -191,7 +195,7 @@ time.sleep(2)
 
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[4]/div[2]/input").send_keys("9000366")
+                              "1]/div[4]/div[2]/input").send_keys({sabutis_nomeri})
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
                               "1]/div[4]/div[3]/input").send_keys("იუსტიცია")
@@ -249,7 +253,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "4]/div/div/div[3]/input").send_keys("თბილისი")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
-                              "1]/div/div[1]/input").send_keys("571135940")
+                              "1]/div/div[1]/input").send_keys({teleponis_nomeri})
 z = 10
 while z > 0:
     scroll_element2 = send_keys('{DOWN}')

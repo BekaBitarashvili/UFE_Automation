@@ -145,7 +145,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "4]/div/div/div[2]/input").send_keys("საქართველო")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
-                              "4]/div/div/div[3]/input").send_keys("თბილისი")
+                              "4]/div/div/div[3]/input").send_keys("სოფელი ძველი")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
                               "1]/div/div[1]/input").send_keys("598926660")

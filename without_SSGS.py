@@ -18,7 +18,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 piradi_nomeri = "00000002019"
 sabutis_nomeri = "9000370"
-teleponis_nomeri = "571135944"
+teleponis_nomeri = "571135945"
 
 driver.implicitly_wait(3)
 driver.get("https://ufe-int.crystal.ge")
@@ -243,14 +243,14 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "2]/div/div/div[2]/input").send_keys("საქართველო")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
-                              "2]/div/div/div[3]/input").send_keys("თბილისი")
+                              "2]/div/div/div[3]/input").send_keys("სოფელი ძველი")
 
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
                               "4]/div/div/div[2]/input").send_keys("საქართველო")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
-                              "4]/div/div/div[3]/input").send_keys("თბილისი")
+                              "4]/div/div/div[3]/input").send_keys("სოფელი ძველი")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
                               "1]/div/div[1]/input").send_keys({teleponis_nomeri})
@@ -352,19 +352,19 @@ dropdown_annual_income.send_keys(Keys.DOWN)
 # კლიკები
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[1]/div/div/div[2]/input").click()
+                              "4]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[2]/div/div/div[2]/input").click()
+                              "5]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[3]/div/div/div[2]/input").click()
+                              "6]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[4]/div/div/div[2]/input").click()
+                              "7]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[5]/div/div/div[2]/input").click()
+                              "8]/div[2]/div/div[2]/input").click()
 time.sleep(4)
 print("მეორე სექცია წარმატებით შეივსო")
 
@@ -462,4 +462,5 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
 time.sleep(5)
 # REGISTER BUTTON CLICK
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                              "-create/div/button").click()
+                              "-create/div/div/button").click()
+

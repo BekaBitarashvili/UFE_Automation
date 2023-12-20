@@ -43,7 +43,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "1]/div[2]/input").send_keys("ჭავჭავაძე")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[3]/input").send_keys("00000003418")
+                              "1]/div[3]/input").send_keys("12345678906")
 
 # CHOOSE DOC TYPE
 dropdown_document_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
@@ -74,7 +74,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
 
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "2]/div[3]/input").send_keys("00AA00419")
+                              "2]/div[3]/input").send_keys("99ID00004")
 
 # UPLOAD FILE driver.find_element(By.XPATH,
 # "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer-create" "/kendo-tabstrip/div[
@@ -113,9 +113,18 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "1]/div[1]/div[3]/input").send_keys("გიორგი")
 
 # BIRTHPLACE
-driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                              "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[2]/div[4]/input").send_keys("თბილისი")
+dabkalaki = driver.find_element(By.XPATH,
+                                "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                                "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
+                                "1]/div[2]/div[4]/input")
+if dabkalaki is None:
+    dabkalaki = driver.find_element(By.XPATH,
+                                    "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+                                    "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
+                                    "1]/div[2]/div[4]/input")
+    dabkalaki.send_keys("თბილისი")
+else:
+    print("წამოიღო აღარ ვავსებთ!")
 
 # CHOOSE FAMILY STATUS
 dropdown_family_type = driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
@@ -148,7 +157,7 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
                               "4]/div/div/div[3]/input").send_keys("სოფელი ძველი")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
-                              "1]/div/div[1]/input").send_keys("598926660")
+                              "1]/div/div[1]/input").send_keys("571135945")
 z = 10
 while z > 0:
     scroll_element2 = send_keys('{DOWN}')
@@ -246,19 +255,19 @@ dropdown_annual_income.send_keys(Keys.DOWN)
 # კლიკები
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[1]/div/div/div[2]/input").click()
+                              "4]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[2]/div/div/div[2]/input").click()
+                              "5]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[3]/div/div/div[2]/input").click()
+                              "6]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[4]/div/div/div[2]/input").click()
+                              "7]/div[2]/div/div[2]/input").click()
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                              "4]/div[5]/div/div/div[2]/input").click()
+                              "8]/div[2]/div/div[2]/input").click()
 time.sleep(4)
 print("მეორე სექცია წარმატებით შეივსო")
 

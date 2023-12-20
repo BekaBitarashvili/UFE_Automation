@@ -365,4 +365,4 @@ driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body
 time.sleep(5)
 # REGISTER BUTTON CLICK
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                              "-create/div/button").click()
+                              "-create/div/div/button").click()

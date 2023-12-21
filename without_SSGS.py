@@ -16,9 +16,9 @@ options = Options()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-piradi_nomeri = "00000002019"
-sabutis_nomeri = "9000370"
-teleponis_nomeri = "571135946"
+piradi_nomeri = "00000002020"
+sabutis_nomeri = "9000371"
+teleponis_nomeri = "571135949"
 
 driver.implicitly_wait(3)
 driver.get("https://ufe-int.crystal.ge")
@@ -41,10 +41,10 @@ time.sleep(4)
 # FIRST PAGE
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[1]/input").send_keys("ნატა")
+                              "1]/div[1]/input").send_keys("ზვიად")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                              "1]/div[2]/input").send_keys("გოიაშვილი")
+                              "1]/div[2]/input").send_keys("გამსახურდია")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
                               "1]/div[3]/input").send_keys({piradi_nomeri})
@@ -114,14 +114,14 @@ while i > 0:
 time.sleep(3)
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[1]/input").send_keys("ილია")
+                              "1]/div[1]/div[1]/input").send_keys("ზვიად")
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[2]/input").send_keys("ჭავჭავაძე")
+                              "1]/div[1]/div[2]/input").send_keys("გამსახურდია")
 # FATHER NAME
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                              "1]/div[1]/div[3]/input").send_keys("გიორგი")
+                              "1]/div[1]/div[3]/input").send_keys("კონსტანტინე")
 # PERSONAL NUMBER
 driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                               "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["

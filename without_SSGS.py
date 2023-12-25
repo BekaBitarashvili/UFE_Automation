@@ -16,9 +16,9 @@ options = Options()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-piradi_nomeri = "00000002020"
-sabutis_nomeri = "9000371"
-teleponis_nomeri = "571135949"
+piradi_nomeri = "00000002023"
+sabutis_nomeri = "9000374"
+teleponis_nomeri = "571135950"
 
 driver.implicitly_wait(3)
 driver.get("https://ufe-int.crystal.ge")

@@ -18,7 +18,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 piradi_nomeri = "00000002023"
 sabutis_nomeri = "9000374"
-teleponis_nomeri = "571135950"
+teleponis_nomeri = "571135951"
 
 driver.implicitly_wait(3)
 driver.get("https://ufe-int.crystal.ge")

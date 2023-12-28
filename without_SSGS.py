@@ -16,8 +16,8 @@ options = Options()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-piradi_nomeri = "00000002023"
-sabutis_nomeri = "9000374"
+piradi_nomeri = "00000002027"
+sabutis_nomeri = "9000375"
 teleponis_nomeri = "571135951"
 
 driver.implicitly_wait(3)

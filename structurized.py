@@ -13,9 +13,9 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "00000002028"
-sabutis_nomeri = "9000376"
-teleponis_nomeri = "571135951"
+piradi_nomeri = "00000002031"
+sabutis_nomeri = "98234234"
+teleponis_nomeri = "571135953"
 
 
 class TestWebsite(unittest.TestCase):

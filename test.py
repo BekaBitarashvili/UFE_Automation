@@ -20,5 +20,5 @@ for _ in range(pass_length):
         pass_data += random.choice(digit)
 print(pass_data)
 
-# a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-# print(random.choice(a))
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(random.choice(a))

@@ -4,7 +4,7 @@ import time
 from selenium.webdriver.support.ui import Select
 from pywinauto.keyboard import send_keys
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC, wait
+from selenium.webdriver.support import expected_conditions as ec, wait
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
@@ -13,8 +13,8 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "00000002045"
-sabutis_nomeri = "98234244"
+piradi_nomeri = "00000002047"
+sabutis_nomeri = "98234247"
 teleponis_nomeri = "571135993"
 
 
@@ -364,7 +364,8 @@ class TestWebsite(unittest.TestCase):
 
     def test_11_fatca(self):
         dropdown_work_type = self.driver.find_element(By.XPATH,
-                                                      "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
+                                                      "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                      "/main"
                                                       "/div/as-customer-create/kendo-tabstrip/div["
                                                       "2]/as-customer-additional-info/div/div/form/div[5]/div/div["
                                                       "1]/div[2]/kendo-dropdownlist/button")

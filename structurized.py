@@ -13,9 +13,9 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "00000002051"
-sabutis_nomeri = "98234251"
-teleponis_nomeri = "571135990"
+piradi_nomeri = "01234567849"
+sabutis_nomeri = "99ID00047"
+teleponis_nomeri = "571135986" # 555164502
 
 
 class TestWebsite(unittest.TestCase):
@@ -134,11 +134,11 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[1]/input").send_keys("აკაკი")
+                                 "1]/div[1]/div[1]/input").send_keys("ნოე")
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[2]/input").send_keys("წერეთელიოთხი")
+                                 "1]/div[1]/div[2]/input").send_keys("ჟორდანია")
         # FATHER NAME
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"

@@ -16,6 +16,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 piradi_nomeri = "01234567849"
 sabutis_nomeri = "99ID00047"
 teleponis_nomeri = "571135986"
+saxeli = ""
+gvari = ""
 
 
 class TestWebsite(unittest.TestCase):

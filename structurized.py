@@ -53,11 +53,11 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                                 "1]/div[1]/input").send_keys("ზვიად")
+                                 "1]/div[1]/input").send_keys({saxeli})
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                                 "1]/div[2]/input").send_keys("გამსახურდია")
+                                 "1]/div[2]/input").send_keys({gvari})
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
@@ -136,11 +136,11 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[1]/input").send_keys("ნოე")
+                                 "1]/div[1]/div[1]/input").send_keys({saxeli})
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[2]/input").send_keys("ჟორდანია")
+                                 "1]/div[1]/div[2]/input").send_keys({gvari})
         # FATHER NAME
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"

@@ -13,11 +13,11 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "01234567849"
-sabutis_nomeri = "99ID00047"
-teleponis_nomeri = "571135986"
-saxeli = ""
-gvari = ""
+piradi_nomeri = "01234567824"
+sabutis_nomeri = "99ID00021"
+teleponis_nomeri = "571135985"
+saxeli = "გიორგი"
+gvari = "სააკაძე"
 
 
 class TestWebsite(unittest.TestCase):

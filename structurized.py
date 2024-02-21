@@ -13,11 +13,11 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "01234567824"
-sabutis_nomeri = "99ID00021"
-teleponis_nomeri = "571135985"
-saxeli = "ტერენტი"
-gvari = "გრანელი"
+piradi_nomeri = "01234567002"  # 01234567826 #01234567827 - სსგს
+sabutis_nomeri = "99ID00025"
+teleponis_nomeri = "571135986"
+saxeli = "კარგი"
+gvari = "ადამიანი"
 
 
 class TestWebsite(unittest.TestCase):
@@ -522,7 +522,7 @@ class TestWebsite(unittest.TestCase):
             "C:\\Users\\b"
             ".bitarashvili"
             "\\Desktop"
-            "\\prof_image.jpg")
+            "\\default.jpg")
 
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"

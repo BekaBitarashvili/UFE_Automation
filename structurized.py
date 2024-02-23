@@ -39,7 +39,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.get("https://ufe-int.crystal.ge")
         time.sleep(3)
         self.driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[1]/input").send_keys(
-            "ALEXANDREB")
+            "BEKAB")
         self.driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[2]/input").send_keys(
             "12345678")
         self.driver.find_element(By.XPATH, "/html/body/div[2]/main/div/main/div/div[2]/form/div[5]/button").click()

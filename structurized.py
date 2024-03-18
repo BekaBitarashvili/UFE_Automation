@@ -13,9 +13,9 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "01234567002"  # 01234567826 #01234567827 - სსგს
-sabutis_nomeri = "99ID00025"
-teleponis_nomeri = "571135986"
+piradi_nomeri = "01234567003"  # 01234567826 #01234567827 - სსგს
+sabutis_nomeri = "99ID00026"
+teleponis_nomeri = "571135987"
 saxeli = "კარგი"
 gvari = "ადამიანი"
 

@@ -13,11 +13,11 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "01234567003"  # 01234567826 #01234567827 - სსგს
-sabutis_nomeri = "99ID00026"
-teleponis_nomeri = "571135987"
-saxeli = "კარგი"
-gvari = "ადამიანია"
+piradi_nomeri = "01234567004"  # 01234567826 #01234567827 - სსგს
+sabutis_nomeri = "99ID00027"
+teleponis_nomeri = "571135990"
+saxeli = "რეგ"
+gvari = "რესია"
 
 
 class TestWebsite(unittest.TestCase):
@@ -123,6 +123,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH, "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div["
                                            "1]/div/"
                                            "button").click()
+        time.sleep(3)
 
     def test_03_scroll_page1(self):
         self.driver.find_element(By.TAG_NAME, 'html').click()
@@ -300,6 +301,7 @@ class TestWebsite(unittest.TestCase):
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
                                  "1]/div/div[1]/input").send_keys({teleponis_nomeri})
+        time.sleep(3)
 
     def test_07_scroll_page3(self):
         self.driver.find_element(By.TAG_NAME, 'html').click()
@@ -307,18 +309,19 @@ class TestWebsite(unittest.TestCase):
         while i > 0:
             send_keys('{DOWN}')
             i -= 1
-        time.sleep(2)
+        time.sleep(3)
 
     def test_08_otp(self):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
                                  "2]/div/button").click()
-        time.sleep(2)
+        time.sleep(4)
         # CLOSE OTP MESSAGE
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div[1]/div/butto"
                                  "n").click()
+        time.sleep(3)
 
     def test_09_types(self):
         # ADDITIONAL INFORMATION

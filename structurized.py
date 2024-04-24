@@ -17,7 +17,7 @@ piradi_nomeri = "01234567004"  # 01234567826 #01234567827 - სსგს
 sabutis_nomeri = "99ID00027"
 teleponis_nomeri = "571135990"
 saxeli = "რეგ"
-gvari = "რესია"
+gvari = "რესიაა"
 
 
 class TestWebsite(unittest.TestCase):

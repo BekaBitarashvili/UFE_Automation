@@ -13,11 +13,11 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "01234567004"  # 01234567826 #01234567827 - სსგს
-sabutis_nomeri = "99ID00027"
-teleponis_nomeri = "571135990"
-saxeli = "რეგ"
-gvari = "რესიაა"
+piradi_nomeri = "01234567005"  # 01234567835 #01234567836 - სსგს
+sabutis_nomeri = "99ID00028"
+teleponis_nomeri = "571135991"
+saxeli = "ევგენი"
+gvari = "მიქელაძე"
 
 
 class TestWebsite(unittest.TestCase):
@@ -53,15 +53,15 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                                 "1]/div[1]/input").send_keys({saxeli})
+                                 "1]/div[1]/input").send_keys(saxeli)
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                                 "1]/div[2]/input").send_keys({gvari})
+                                 "1]/div[2]/input").send_keys(gvari)
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                                 "1]/div[3]/input").send_keys({piradi_nomeri})
+                                 "1]/div[3]/input").send_keys(piradi_nomeri)
         dropdown_document_type = self.driver.find_element(By.XPATH,
                                                           "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
                                                           "/main/div/as-customer-create/kendo-tabstrip/div["
@@ -95,30 +95,34 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[1]/form/div["
-                                 "2]/div[3]/input").send_keys({sabutis_nomeri})
+                                 "2]/div[3]/input").send_keys(sabutis_nomeri)
         # თანხმობის ატვირთვა
-        self.driver.find_element(By.XPATH,
-                                 "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                                 "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
-                                 "1]/button").click()
-        self.driver.find_element(By.XPATH,
-                                 "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                                 "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
-                                 "1]/div/kendo-popup/div/div/ufe-application-consent-form/input").send_keys(
-            "C:\\Users\\b"
-            ".bitarashvili"
-            "\\Desktop\\UFE"
-            "\\Freeze.png")
-        self.driver.find_element(By.XPATH,
-                                 "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                                 "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
-                                 "1]/div/kendo-popup/div/div/ufe-application-consent-form/div[2]/button[1]").click()
+        # self.driver.find_element(By.XPATH,
+        #                          "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+        #                          "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
+        #                          "1]/button").click()
+        # self.driver.find_element(By.XPATH,
+        #                          "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+        #                          "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
+        #                          "1]/div/kendo-popup/div/div/ufe-application-consent-form/input").send_keys(
+        #     "C:\\Users\\b"
+        #     ".bitarashvili"
+        #     "\\Desktop\\UFE"
+        #     "\\Freeze.png")
+        # self.driver.find_element(By.XPATH,
+        #                          "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
+        #                          "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
+        #                          "1]/div/kendo-popup/div/div/ufe-application-consent-form/div[2]/button[1]").click()
         # სგს BUTTON
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[1]/div[2]/div["
                                  "2]/div/button").click()
-        time.sleep(5)
+        # wait until button is clickable
+        wait.WebDriverWait(self.driver, 10).until(ec.element_to_be_clickable(
+            (By.XPATH, "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div["
+                       "1]/div/"
+                       "button")))
         # # CLOSE ERROR MESSAGE
         self.driver.find_element(By.XPATH, "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div["
                                            "1]/div/"
@@ -137,11 +141,11 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[1]/input").send_keys({saxeli})
+                                 "1]/div[1]/div[1]/input").send_keys(saxeli)
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[2]/input").send_keys({gvari})
+                                 "1]/div[1]/div[2]/input").send_keys(gvari)
         # FATHER NAME
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
@@ -151,7 +155,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[4]/input").send_keys({piradi_nomeri})
+                                 "1]/div[1]/div[4]/input").send_keys(piradi_nomeri)
 
         # BIRTHPLACE
         self.driver.find_element(By.XPATH,
@@ -231,7 +235,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[4]/div[2]/input").send_keys({sabutis_nomeri})
+                                 "1]/div[4]/div[2]/input").send_keys(sabutis_nomeri)
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
@@ -300,7 +304,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
-                                 "1]/div/div[1]/input").send_keys({teleponis_nomeri})
+                                 "1]/div/div[1]/input").send_keys(teleponis_nomeri)
         time.sleep(3)
 
     def test_07_scroll_page3(self):

@@ -1,6 +1,8 @@
 import unittest
 import time
+import random, string
 
+from faker import Faker
 from selenium.webdriver.support.ui import Select
 from pywinauto.keyboard import send_keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,11 +15,26 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 
-piradi_nomeri = "01234567006"  # 01234567835 #01234567841 #01234567842 #01234567843 #01234567844 #01234567845- სსგს
-sabutis_nomeri = "99ID00031"
-teleponis_nomeri = "571135991"
-saxeli = "ევგენი"
-gvari = "მიქელაძე"
+fake = Faker()
+
+piradi_nomeri = str(random.randint(10000000000, 99999999999))
+sabutis_nomeri = str(random.randint(10, 99)) + "ID" + str(random.randint(10000, 99999))
+teleponis_nomeri = str(random.randint(100000000, 999999999))
+
+georgian_letters = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს',
+                    'ტ', 'უ', 'ფ', 'ქ', 'ღ', 'ყ', 'შ', 'ჩ', 'ც', 'ძ', 'წ', 'ჭ', 'ხ', 'ჯ', 'ჰ']
+
+
+def generate_georgian_name(length=4):
+    return ''.join(random.choice(georgian_letters) for _ in range(length))
+
+
+def generate_georgian_surname(length=8):
+    return ''.join(random.choice(georgian_letters) for _ in range(length))
+
+
+saxeli = generate_georgian_name()
+gvari = generate_georgian_surname()
 userdict = {
     "99ID00033": "01234567835",
     "99ID00039": "01234567841",
@@ -27,6 +44,8 @@ userdict = {
     "99ID00043": "01234567845"
 }
 
+
+# 01234567835 #01234567841 #01234567842 #01234567843 #01234567844 #01234567845- სსგს
 
 class TestWebsite(unittest.TestCase):
     driver = None

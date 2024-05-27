@@ -465,11 +465,9 @@ class TestWebsite(unittest.TestCase):
 
         dropdown_attr_work = self.driver.find_element(By.XPATH,
                                                       "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
-                                                      "/main"
-                                                      "/div/as-customer"
-                                                      "-create/kendo-tabstrip/div["
-                                                      "2]/as-customer-attributes/form/div/div/div[1]/div["
-                                                      "1]/kendo-dropdownlist/button")
+                                                      "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                      "2]/as-customer-attributes/div/div/div/div/form/div/div/div["
+                                                      "1]/div[1]/kendo-dropdownlist/button")
         dropdown_attr_work.click()
         time.sleep(1.5)
         dropdown_attr_work.send_keys(Keys.DOWN)
@@ -477,10 +475,9 @@ class TestWebsite(unittest.TestCase):
         # ბიზნეს ქალაქი
         dropdown_attr_city = self.driver.find_element(By.XPATH,
                                                       "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
-                                                      "/main"
-                                                      "/div/as-customer-create/kendo-tabstrip/div["
-                                                      "2]/as-customer-attributes/form/div/div/div[1]/div["
-                                                      "2]/kendo-dropdownlist/button")
+                                                      "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                      "2]/as-customer-attributes/div/div/div/div/form/div/div/div["
+                                                      "1]/div[2]/kendo-dropdownlist/button")
         dropdown_attr_city.click()
         time.sleep(1.5)
         dropdown_attr_city.send_keys(Keys.DOWN)
@@ -489,8 +486,8 @@ class TestWebsite(unittest.TestCase):
         dropdown_attr_income = self.driver.find_element(By.XPATH,
                                                         "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
                                                         "/main/div/as-customer-create/kendo-tabstrip/div["
-                                                        "2]/as-customer-attributes/form/div/div/div[2]/div["
-                                                        "1]/kendo-dropdownlist/button")
+                                                        "2]/as-customer-attributes/div/div/div/div/form/div/div/div["
+                                                        "2]/div[1]/kendo-dropdownlist/button")
         dropdown_attr_income.click()
         time.sleep(1.5)
         dropdown_attr_income.send_keys(Keys.DOWN)
@@ -498,10 +495,9 @@ class TestWebsite(unittest.TestCase):
         # ინფორმაციის წყარო
         dropdown_attr_info = self.driver.find_element(By.XPATH,
                                                       "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
-                                                      "/main"
-                                                      "/div/as-customer-create/kendo-tabstrip/div["
-                                                      "2]/as-customer-attributes/form/div/div/div[2]/div["
-                                                      "2]/kendo-dropdownlist/button")
+                                                      "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                      "2]/as-customer-attributes/div/div/div/div/form/div/div/div["
+                                                      "2]/div[2]/kendo-dropdownlist/button")
         dropdown_attr_info.click()
         time.sleep(1.5)
         dropdown_attr_info.send_keys(Keys.DOWN)
@@ -510,8 +506,8 @@ class TestWebsite(unittest.TestCase):
         dropdown_attr_status = self.driver.find_element(By.XPATH,
                                                         "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
                                                         "/main/div/as-customer-create/kendo-tabstrip/div["
-                                                        "2]/as-customer-attributes/form/div/div/div[3]/div["
-                                                        "1]/kendo-dropdownlist/button")
+                                                        "2]/as-customer-attributes/div/div/div/div/form/div/div/div["
+                                                        "3]/div[1]/kendo-dropdownlist/button")
         dropdown_attr_status.click()
         time.sleep(1.5)
         dropdown_attr_status.send_keys(Keys.DOWN)
@@ -519,10 +515,9 @@ class TestWebsite(unittest.TestCase):
         # საცხოვრებელი სტატუსი
         dropdown_attr_home = self.driver.find_element(By.XPATH,
                                                       "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
-                                                      "/main"
-                                                      "/div/as-customer-create/kendo-tabstrip/div["
-                                                      "2]/as-customer-attributes/form/div/div/div[3]/div["
-                                                      "2]/kendo-dropdownlist/button")
+                                                      "/main/div/as-customer-create/kendo-tabstrip/div["
+                                                      "2]/as-customer-attributes/div/div/div/div/form/div/div/div["
+                                                      "3]/div[2]/kendo-dropdownlist/button")
         dropdown_attr_home.click()
         time.sleep(1.5)
         dropdown_attr_home.send_keys(Keys.DOWN)
@@ -530,7 +525,8 @@ class TestWebsite(unittest.TestCase):
         # business address
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                                 "-create/kendo-tabstrip/div[2]/as-customer-attributes/form/div/div/div[1]/div["
+                                 "-create/kendo-tabstrip/div["
+                                 "2]/as-customer-attributes/div/div/div/div/form/div/div/div[1]/div["
                                  "3]/input").send_keys("აბასთუმანი")
 
     def test_14_files(self):

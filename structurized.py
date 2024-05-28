@@ -347,7 +347,7 @@ class TestWebsite(unittest.TestCase):
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
                                  "2]/div/button").click()
-        time.sleep(4)
+        time.sleep(10)
         # CLOSE OTP MESSAGE
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/as-dialog/div/ufe-base-dialog/div/div/div/div[1]/div/butto"
@@ -362,8 +362,8 @@ class TestWebsite(unittest.TestCase):
 
         # ქვეტიპი
         dropdown_qvetype = self.driver.find_element(By.XPATH,
-                                                    "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main"
-                                                    "/div/as-customer-create/kendo-tabstrip/div["
+                                                    "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                    "/main/div/as-customer-create/kendo-tabstrip/div["
                                                     "2]/as-customer-additional-info/div/div/form/div[1]/div/div/div["
                                                     "2]/kendo-dropdownlist/button")
         dropdown_qvetype.click()
@@ -387,8 +387,8 @@ class TestWebsite(unittest.TestCase):
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div["
                                  "1]/div/div/div[3]/div/kendo-popup/div/div/ufe-tree/div/div/div/ufe-tree-selector["
-                                 "1]/div/li/ul/ufe-tree-selector/div/li/ul/ufe-tree-selector/div/li/div/div/label/input"
-                                 "").click()
+                                 "1]/div/li/ul/ufe-tree-selector/div/li/ul/ufe-tree-selector/div/li/div/div/label"
+                                 "/input").click()
 
     def test_10_scroll_page4(self):
         self.driver.find_element(By.TAG_NAME, 'html').click()
@@ -411,20 +411,20 @@ class TestWebsite(unittest.TestCase):
 
         # შემოსავლის წყარო
         dropdown_income_source = self.driver.find_element(By.XPATH,
-                                                          "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
-                                                          "/main/div/as-customer-create/kendo-tabstrip/div["
-                                                          "2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                                                          "1]/div[3]/kendo-dropdownlist/button")
+                                                          "/html/body/ufe-root/div/div/as-customers/ufe-body-layout"
+                                                          "/div/main/div/as-customer-create/kendo-tabstrip/div["
+                                                          "2]/as-customer-additional-info/div/div/form/div["
+                                                          "5]/div/div[1]/div[3]/kendo-dropdownlist/button")
         dropdown_income_source.click()
         time.sleep(2)
         dropdown_income_source.send_keys(Keys.DOWN)
 
         # წლიური ბრუნვა
         dropdown_annual_income = self.driver.find_element(By.XPATH,
-                                                          "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
-                                                          "/main/div/as-customer-create/kendo-tabstrip/div["
-                                                          "2]/as-customer-additional-info/div/div/form/div[5]/div/div["
-                                                          "2]/div[3]/kendo-dropdownlist/button")
+                                                          "/html/body/ufe-root/div/div/as-customers/ufe-body-layout"
+                                                          "/div/main/div/as-customer-create/kendo-tabstrip/div["
+                                                          "2]/as-customer-additional-info/div/div/form/div["
+                                                          "5]/div/div[2]/div[3]/kendo-dropdownlist/button")
         dropdown_annual_income.click()
         time.sleep(2)
         dropdown_annual_income.send_keys(Keys.DOWN)
@@ -433,28 +433,23 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div["
-                                 "5]/div/div["
-                                 "4]/div[2]/div/div[2]/input").click()
+                                 "5]/div/div[4]/div[2]/div/div[2]/input").click()
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div["
-                                 "5]/div/div["
-                                 "5]/div[2]/div/div[2]/input").click()
+                                 "5]/div/div[5]/div[2]/div/div[2]/input").click()
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div["
-                                 "5]/div/div["
-                                 "6]/div[2]/div/div[2]/input").click()
+                                 "5]/div/div[6]/div[2]/div/div[2]/input").click()
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div["
-                                 "5]/div/div["
-                                 "7]/div[2]/div/div[2]/input").click()
+                                 "5]/div/div[7]/div[2]/div/div[2]/input").click()
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div["
-                                 "5]/div/div["
-                                 "8]/div[2]/div/div[2]/input").click()
+                                 "5]/div/div[8]/div[2]/div/div[2]/input").click()
 
     def test_13_attributes(self):
         self.driver.find_element(By.XPATH,

@@ -557,7 +557,7 @@ class TestWebsite(unittest.TestCase):
         time.sleep(2)
 
     def test_15_register_button(self):
-        # REGISTER BUTTON CLICK
+        # REGISTER BUTTON
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/div/div/button").click()

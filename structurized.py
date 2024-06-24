@@ -357,7 +357,12 @@ class TestWebsite(unittest.TestCase):
 
     def test_09_types(self):
         # ADDITIONAL INFORMATION
-        self.driver.find_element(By.ID, "k-tabstrip-tab-2927e64f-f8fd-4c87-822a-b615977371d1-1").click()
+        typespage = self.driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                                       "/main/div/as"
+                                                       "-customer"
+                                                       "-create/kendo-tabstrip/div[1]/ul/li[2]/span")
+        typespage.click()
+        time.sleep(1.5)
 
         # ქვეტიპი
         dropdown_qvetype = self.driver.find_element(By.XPATH,

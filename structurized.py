@@ -37,12 +37,8 @@ def generate_georgian_surname(length=8):
 saxeli = generate_georgian_name()
 gvari = generate_georgian_surname()
 userdict = {
-    "99ID00033": "01234567835",
-    "99ID00039": "01234567841",
-    "99ID00040": "01234567842",
-    "99ID00041": "01234567843",
-    "99ID00042": "01234567844",
-    "99ID00043": "01234567845"
+    "99ID00044": "01234567846",
+    "99ID00045": "01234567847"
 }
 
 
@@ -335,13 +331,13 @@ class TestWebsite(unittest.TestCase):
                                  "1]/div/div[1]/input").send_keys(teleponis_nomeri)
         time.sleep(3)
 
-    def test_07_scroll_page3(self):
-        self.driver.find_element(By.TAG_NAME, 'html').click()
-        i = 10
-        while i > 0:
-            send_keys('{DOWN}')
-            i -= 1
-        time.sleep(3)
+    # def test_07_scroll_page3(self):
+    #     self.driver.find_element(By.TAG_NAME, 'html').click()
+    #     i = 10
+    #     while i > 0:
+    #         send_keys('{DOWN}')
+    #         i -= 1
+    #     time.sleep(3)
 
     def test_08_otp(self):
         self.driver.find_element(By.XPATH,
@@ -357,6 +353,12 @@ class TestWebsite(unittest.TestCase):
 
     def test_09_types(self):
         # ADDITIONAL INFORMATION
+        # mainpage = self.driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+        #                                               "/main/div/as-customer-create/kendo-tabstrip/div[1]/ul/li["
+        #                                               "3]/span")
+        # mainpage.click()
+        # send_keys(Keys.LEFT)
+
         typespage = self.driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
                                                        "/main/div/as"
                                                        "-customer"
@@ -454,12 +456,22 @@ class TestWebsite(unittest.TestCase):
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-additional-info/div/div/form/div["
                                  "5]/div/div[8]/div[2]/div/div[2]/input").click()
+        time.sleep(3)
+        self.driver.find_element(By.TAG_NAME, 'html').click()
+        send_keys('{UP}')
+        send_keys('{UP}')
+        send_keys('{UP}')
+        send_keys('{UP}')
+        send_keys('{UP}')
 
     def test_13_attributes(self):
-        self.driver.find_element(By.XPATH,
-                                 "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                                 "-create/kendo-tabstrip/div[1]/ul/li[3]/span").click()
-        time.sleep(1.5)
+        attpage = self.driver.find_element(By.XPATH,
+                                           "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+                                           "/main/div/as"
+                                           "-customer"
+                                           "-create/kendo-tabstrip/div[1]/ul/li[3]/span")
+        attpage.click()
+        time.sleep(3)
         # საქმიანობის სფერო
 
         dropdown_attr_work = self.driver.find_element(By.XPATH,

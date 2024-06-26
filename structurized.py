@@ -1,6 +1,7 @@
 import unittest
 import time
 import random, string
+from telnetlib import EC
 
 from faker import Faker
 from selenium.webdriver.support.ui import Select
@@ -458,19 +459,15 @@ class TestWebsite(unittest.TestCase):
                                  "5]/div/div[8]/div[2]/div/div[2]/input").click()
         time.sleep(3)
         self.driver.find_element(By.TAG_NAME, 'html').click()
-        send_keys('{UP}')
-        send_keys('{UP}')
-        send_keys('{UP}')
-        send_keys('{UP}')
-        send_keys('{UP}')
+        i = 13
+        while i > 0:
+            send_keys('{UP}')
+            i -= 1
+        time.sleep(2)
 
     def test_13_attributes(self):
-        attpage = self.driver.find_element(By.XPATH,
-                                           "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
-                                           "/main/div/as"
-                                           "-customer"
-                                           "-create/kendo-tabstrip/div[1]/ul/li[3]/span")
-        attpage.click()
+        self.driver.find_element(By.XPATH, "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as"
+                                           "-customer-create/kendo-tabstrip/div[1]/ul/li[3]/span").click()
         time.sleep(3)
         # საქმიანობის სფერო
 

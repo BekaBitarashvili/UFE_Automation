@@ -21,7 +21,7 @@ fake = Faker()
 
 piradi_nomeri = str(random.randint(10000000000, 99999999999))
 sabutis_nomeri = str(random.randint(10, 99)) + "ID" + str(random.randint(10000, 99999))
-teleponis_nomeri = str(random.randint(100000000, 999999999))
+teleponis_nomeri = "555" + str(random.randint(100000, 999999))
 
 georgian_letters = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს',
                     'ტ', 'უ', 'ფ', 'ქ', 'ღ', 'ყ', 'შ', 'ჩ', 'ც', 'ძ', 'წ', 'ჭ', 'ხ', 'ჯ', 'ჰ']
@@ -97,8 +97,16 @@ class TestWebsite(unittest.TestCase):
         dropdown_document_type.click()
         time.sleep(2)
         # CHOOSE FROM DROPDOWN_DOC_TYPE
-        dropdown_document_type.send_keys(Keys.DOWN)
-        dropdown_document_type.send_keys(Keys.DOWN)
+        for _ in range(8):
+            dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
+        # dropdown_document_type.send_keys(Keys.DOWN)
 
         # TRIPLE CLICK
         element_to_triple_click = self.driver.find_element(By.XPATH,
@@ -253,8 +261,9 @@ class TestWebsite(unittest.TestCase):
         dropdown_doc_type.click()
         time.sleep(1)
         # CHOOSE FROM DROPDOWN_DOC_TYPE
-        dropdown_doc_type.send_keys(Keys.DOWN)
-        dropdown_doc_type.send_keys(Keys.DOWN)
+        for _ in range(8):
+            dropdown_doc_type.send_keys(Keys.DOWN)
+
         time.sleep(1)
 
         self.driver.find_element(By.XPATH,
@@ -326,10 +335,15 @@ class TestWebsite(unittest.TestCase):
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
                                  "4]/div/div/div[3]/input").send_keys("სოფელი ძველი")
-        self.driver.find_element(By.XPATH,
-                                 "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
-                                 "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[5]/div["
-                                 "1]/div/div[1]/input").send_keys(teleponis_nomeri)
+        otpinput = self.driver.find_element(By.XPATH,
+                                            "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as"
+                                            "-customer"
+                                            "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div["
+                                            "3]/form/div[5]/div["
+                                            "1]/div/div[1]/kendo-maskedtextbox/input")
+        for _ in range(1):
+            otpinput.click()
+        otpinput.send_keys(teleponis_nomeri)
         time.sleep(3)
 
     # def test_07_scroll_page3(self):

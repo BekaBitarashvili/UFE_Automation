@@ -37,11 +37,6 @@ def generate_georgian_surname(length=8):
 
 saxeli = generate_georgian_name()
 gvari = generate_georgian_surname()
-userdict = {
-    "99ID00044": "01234567846",
-    "99ID00045": "01234567847"
-}
-
 
 
 # 01234567835 #01234567841 #01234567842 #01234567843 #01234567844 #01234567845- სსგს

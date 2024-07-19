@@ -68,8 +68,8 @@ class TestWebsite(unittest.TestCase):
 
     def test_02_register_button(self):
         self.driver.find_element(By.XPATH,
-                                 "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/ufe-customer"
-                                 "-list/a").click()
+                                 "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/ufe"
+                                 "-customer-list/div[1]/button").click()
 
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"

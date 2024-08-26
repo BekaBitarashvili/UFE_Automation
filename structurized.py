@@ -179,7 +179,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[1]/div[3]/input").send_keys("ოსამა")
+                                 "1]/div[1]/div[3]/input").send_keys("გუჯა")
         # PERSONAL NUMBER
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
@@ -190,7 +190,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
-                                 "1]/div[2]/div[4]/input").send_keys("ირანი")
+                                 "1]/div[2]/div[4]/input").send_keys("აგარა")
         # TRIPLE CLICK
         elemento_to_triple_click = self.driver.find_element(By.XPATH,
                                                             "/html/body/ufe-root/div/div/as-customers/ufe-body-layout"
@@ -317,7 +317,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
-                                 "2]/div/div/div[2]/input").send_keys("ირანი")
+                                 "2]/div/div/div[2]/input").send_keys("ქართლი")
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
@@ -326,7 +326,7 @@ class TestWebsite(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["
-                                 "4]/div/div/div[2]/input").send_keys("ირანი")
+                                 "4]/div/div/div[2]/input").send_keys("ქართლი")
         self.driver.find_element(By.XPATH,
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[3]/div/div["

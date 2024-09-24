@@ -268,6 +268,18 @@ class TestWebsite(unittest.TestCase):
                                  "/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div/main/div/as-customer"
                                  "-create/kendo-tabstrip/div[2]/as-customer-general/div/div/div[3]/form/div[1]/div["
                                  "1]/div[4]/div[3]/input").send_keys("იუსტიცია")
+        # მოქალაქეობა
+
+        # moqalaqe = self.driver.find_element(By.XPATH,"/html/body/ufe-root/div/div/as-customers/ufe-body-layout/div"
+        #                                              "/main/div/as-customer-create/kendo-tabstrip/div["
+        #                                              "2]/as-customer-general/div/div/div[3]/form/div[1]/div[1]/div["
+        #                                              "4]/div[4]/kendo-dropdownlist/button")
+        # moqalaqe.click()
+        # time.sleep(1)
+        # moqalaqe.send_keys("iran")
+        # time.sleep(1)
+        # moqalaqe.send_keys(Keys.ENTER)
+
         # TRIPLE CLICK FOR DATE
         # გაცემის თარიღი
         gacema_to_triple_click = self.driver.find_element(By.XPATH,
